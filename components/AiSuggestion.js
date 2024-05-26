@@ -4,20 +4,19 @@ import { themeColors } from "../theme";
 import axios from "axios";
 import ReturnRows from "./returnsRow";
 export default function AiSuggestion() {
-  const [text, onChangeText] = useState("5");
-const [stocks,setStocks]=useState("")
-const [returns,setReturn]=useState("")
+  const [text, onChangeText] = useState("");
+  const [stocks, setStocks] = useState([]);
+
 
 const handleSubmit = () => {
     console.log("wait");
 
+   
     axios
       .get(`https://portfolio-recommendation-api.onrender.com/stocks?year=${text}`)
       .then(function (response) {
-        console.log(response.data.returns);
-        console.log(response.data.stocks);
-        setStocks(response.data.returns)
-        setReturn(response.data.stocks)
+        console.log("Stock Recommended for Investment",response.data.data);
+        setStocks(response.data.data)
       })
       .catch(function (error) {
         console.error(error);
@@ -26,6 +25,7 @@ const handleSubmit = () => {
 
   return (
     <>
+
       <TextInput
         style={{
           width: "70%",
@@ -60,11 +60,10 @@ const handleSubmit = () => {
             </Text>
           </TouchableOpacity>
         </View>
+ 
       </View>
 
-      {stocks.padEnd((data,key)=>{
-        console.log("r")
-      })}
+  
     </>
   );
 }

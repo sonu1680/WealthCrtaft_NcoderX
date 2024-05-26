@@ -17,6 +17,20 @@ export const categories = [
   
 ];
 
+export const recommend = [
+  {
+    BRITANNIA: 15.57617438310813,
+  },
+  { DABUR: 9.964088705061933 },
+  { DRREDDY: 19.355483436707136 },
+  { MRF: 20.881192070573213 },
+  { SIEMENS: 41.20964352131962 },
+  { SUNPHARMA: 29.938094445434345 },
+  { TATAMOTORS: 44.289693917118775 },
+  { TATASTEEL: 147.5160125778775 },
+  { TCS: 15.452546862021205 },
+];
+
 export const risk = [
   {
     id: 1,

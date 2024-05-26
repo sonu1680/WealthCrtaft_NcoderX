@@ -23,6 +23,7 @@ export default function Navigation() {
         <Stack.Screen name="Chart" component={ChartScreen} />
 
         <Stack.Screen name="Holding" component={HoldingScreen} />
+
         <Stack.Screen name="ChainGPT" component={ChainGPT} />
 
       </Stack.Navigator>

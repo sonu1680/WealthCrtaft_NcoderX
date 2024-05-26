@@ -9,7 +9,6 @@ const handle=async(e)=>{
 }
 
   return (
-<TouchableOpacity onPress={(e)=>handle(e.target)} >
 
 
     <View className="flex-row items-center bg-white p-3 rounded-3xl shadow-2xl mb-3 mx-2 " style={{shadowColor:"black"}} >
@@ -24,7 +23,7 @@ const handle=async(e)=>{
           <Text className="text-gray-700">{item.description}</Text>
         </View>
         <View className="flex-row justify-between pl-3 items-center">
-          <Text className="text-gray-700 text-lg font-bold">${item.price}</Text>
+          <Text className="text-gray-700 text-lg font-bold">{item.price}</Text>
           <View className="flex-row items-center">
             {/* <TouchableOpacity
               className="p-1 rounded-full"
@@ -53,6 +52,5 @@ const handle=async(e)=>{
         </View>
       </View>
     </View>
-            </TouchableOpacity>
   );
 }
